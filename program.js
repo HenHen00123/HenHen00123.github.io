@@ -3,12 +3,9 @@ var JSON_Decoded;
 var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
 function summonerLookUp() {
-  alert('1');
   alert(userName.value);
-  var SUMMONER_NAME = $("#userName").val();
-  alert(SUMMONER_NAME);
+  var SUMMONER_NAME = userName.value;
   if (SUMMONER_NAME !== "") {
-    alert('try10');
     $.ajax({
       url: 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
       type: 'GET',
