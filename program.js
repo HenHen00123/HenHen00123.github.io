@@ -4,7 +4,6 @@ var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
 
 function summonerLookUp() {
-  alert('hi');
   var SUMMONER_NAME = "";
   SUMMONER_NAME = $("#userName").val();
 
@@ -18,6 +17,7 @@ function summonerLookUp() {
 
       },
       success: function(json) {
+        alert('hi');
         var SUMMONER_NAME_NOSPACES = SUMMONER_NAME.replace(" ", "")
         SUMMONER_NAME_NOSPACES = SUMMONER_NAME_NOSPACES.toLowerCase().trim();
 
