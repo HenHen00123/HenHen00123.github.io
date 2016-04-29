@@ -4,9 +4,8 @@ var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
 function summonerLookUp() {
   var SUMMONER_NAME = userName.value;
-  alert('10');
-  alert(SUMMONER_NAME);
   if (SUMMONER_NAME !== "") {
+    alert(SUMMONER_NAME);
     $.ajax({
       url: 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
       type: 'GET',
@@ -15,7 +14,6 @@ function summonerLookUp() {
 
       },
       success: function(json) {
-        alert('kappa');
         var SUMMONER_NAME_NOSPACES = SUMMONER_NAME.replace(" ", "")
         SUMMONER_NAME_NOSPACES = SUMMONER_NAME_NOSPACES.toLowerCase().trim();
 
