@@ -1,18 +1,40 @@
-Summoner Name
-<br />
-<input id="userName" />
-<input type="submit" onclick=summonerLookUp(); />
+<!DOCTYPE html>
 
-<br />Summoner Level: <span id="sLevel"></span>
+<body>
+
+<div class = "wrapper">
+<div class = "left">
+
+<div class = "name">
+Summoner Name:
+<input id="userName" />
+<input type="submit" onclick=summonerLookUp(userName); />
+</div>
+
+</div>
+
+<div class = "right">
+<div class = "stuff">
+Summoner Level: <span id="sLevel"></span>
 <br />Summoner ID: <span id="sID"></span>
 <br />Summoner Rank: <span id="sRank"></span>
-<br />List of played champs in Ranked:
-<br /><span id="playedChamps"></span>
+<br />Most Played Champ: <span id="playedChamps"></span>
+</div>
 
-<br />
-<hr />Debugging stuff
-<br />
+</div>
+</div>
+
+
+
+<div class = "buttons">
+<hr />
 <button type="submit" onclick="encoded();">JSON String Encoded</button>
 <button type="submit" onclick="decoded();">JSON String Decoded</button>
+</div>
+
+</body>
 
 <script src="program.js"></script>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
