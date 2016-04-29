@@ -5,7 +5,6 @@ var summonerId
 function summonerLookUp() {
   var SUMMONER_NAME = userName.value;
   if (SUMMONER_NAME !== "") {
-    alert(SUMMONER_NAME);
     $.ajax({
       url: 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
       type: 'GET',
