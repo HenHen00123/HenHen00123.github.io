@@ -6,6 +6,7 @@ function summonerLookUp() {
   alert('try1');
   var SUMMONER_NAME = "";
   alert('try2');
+  alert(userName);
   SUMMONER_NAME = $("#userName").val();
   if (SUMMONER_NAME !== "") {
 
