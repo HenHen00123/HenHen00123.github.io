@@ -1,7 +1,18 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+Summoner Name
+<br />
+<input id="userName" />
+<input type="submit" onclick=summonerLookUp(); />
+
+<br />Summoner Level: <span id="sLevel"></span>
+<br />Summoner ID: <span id="sID"></span>
+<br />Summoner Rank: <span id="sRank"></span>
+<br />List of played champs in Ranked:
+<br /><span id="playedChamps"></span>
+
+<br />
+<hr />Debugging stuff
+<br />
+<button type="submit" onclick="encoded();">JSON String Encoded</button>
+<button type="submit" onclick="decoded();">JSON String Decoded</button>
+
+<script src="program.js"></script>
