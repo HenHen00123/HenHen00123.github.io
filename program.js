@@ -2,7 +2,7 @@ var JSON_Encoded;
 var JSON_Decoded;
 var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
-
+alert('0');
 function summonerLookUp() {
   alert('1');
   var SUMMONER_NAME = "";
