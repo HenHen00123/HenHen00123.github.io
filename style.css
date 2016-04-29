@@ -1,0 +1,68 @@
+body {
+  font-weight: 900;
+  font-size: 20px;
+  color: black;
+  padding-top: 25px;
+  font-family: "Courier New",Courier,monospace;
+}
+
+html {
+  background: url(http://www.randomtopic.es/wp-content/uploads/2015/03/league_of_legends_blue_wallpaper_by_rikkutenjouss-d75fujz-1.jpg) no-repeat center center fixed;
+  background-size:cover;
+}
+
+.wrapper {
+     margin-left:auto;
+     margin-right:auto;
+     overflow:auto;
+     display:block;
+     
+}
+
+.right {
+     width: 50%;
+     display: block;
+     float:right;
+}
+.left {
+  width: 50%;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.name {
+  background: rgba(255,255,255,0.75);
+  width:200px;
+  height:60px;
+  border:25px;
+  padding: 25px;
+  border-radius:25px;
+  border: 2px solid white;
+  position:fixed;
+  text-align:center;
+}
+
+.stuff {
+  background: rgba(255,255,255,0.75);
+  width:250px;
+  height:100%;
+  border:25px;
+  padding:25px;
+  border-radius:25px;
+  border: 2px solid white;
+}
+
+.buttons {
+  background: rgba(255,255,255,.5);
+  width:100%;
+  position:absolute;
+  bottom:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+
+
+
