@@ -361,7 +361,13 @@ function champCompare(a, b) {
   } else if (a.stats.totalSessionsPlayed < b.stats.totalSessionsPlayed) {
     return 1;
   } else {
-    return 0;
+    if (a.stats.totalSessionsWon > b.stats.totalSessionsWon) {
+      return -1;
+    } else if (a.stats.totalSessionsWon < b.stats.totalSessionsWon) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 }
 
