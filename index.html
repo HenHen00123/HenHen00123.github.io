@@ -2,40 +2,35 @@
 
 <body>
 
-<div class = "wrapper">
-<div class = "left">
+  <div class="wrapper">
+    <div class="left">
 
-<div class = "name">
-Summoner Name:
-<input id="userName" />
-<input type="submit" onclick=summonerLookUp(userName); />
-</div>
+      <div class="name">
+        Summoner Name:
+        <input id="userName" />
+        <input type="submit" onclick=summonerLookUp(userName); />
+      </div>
 
-</div>
+    </div>
 
-<div class = "right">
-<div class = "stuff">
-Summoner Level: <span id="sLevel"></span>
-<br />Summoner ID: <span id="sID"></span>
-<br />Summoner Rank: <span id="sRank"></span>
-<br />Most Played Champs: <span id="playedChamps"></span>
-</div>
+    <div class="right">
+      <div class="stuff">
+        Summoner Level: <span id="sLevel"></span>
+        <br />Summoner ID: <span id="sID"></span>
+        <br />Summoner Rank: <span id="sRank"></span>
+        <br />Top 5 Played Champs:
+        <br /> <span id="playedChamps"></span>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 
 
 
-<div class = "buttons">
-<hr />
-<button type="submit" onclick="encoded();">JSON String Encoded</button>
-<button type="submit" onclick="decoded();">JSON String Decoded</button>
-</div>
+  <div class="buttons">
+    <hr />
+    <button type="submit" onclick="encoded();">JSON String Encoded</button>
+    <button type="submit" onclick="decoded();">JSON String Decoded</button>
+  </div>
 
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="program.js"></script>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
