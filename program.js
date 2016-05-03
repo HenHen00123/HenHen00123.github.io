@@ -75,11 +75,11 @@ function listChamps() {
       listOfChamps.sort(champCompare); //sort list based on # of games
       if (listOfChamps.length < 6) {
         listOfChamps.forEach(function(item) {
-          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + item.stats.totalSessionsWon + "-" + item.stats.totalSessionsLost + " on " + getChampName(item.id) + "<br />";
+          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + item.stats.totalSessionsWon + "-" + item.stats.totalSessionsLost + " on " + getChampName(item.id) + "<br />KDA: " + (parseInt(item.stats.totalChampionKills)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalDeathsPerSession)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalAssists)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
         });
       } else {
         for (i = 1; i < 6; i++) {
-          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + listOfChamps[i].stats.totalSessionsWon + "-" + listOfChamps[i].stats.totalSessionsLost + " on " + getChampName(listOfChamps[i].id) + "<br />";
+          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + listOfChamps[i].stats.totalSessionsWon + "-" + listOfChamps[i].stats.totalSessionsLost + " on " + getChampName(listOfChamps[i].id) + "<br />KDA: " + (parseInt(listOfChamps[i].stats.totalChampionKills)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalDeathsPerSession)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalAssists)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
         }
       }
     },
