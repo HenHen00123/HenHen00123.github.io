@@ -3,6 +3,21 @@ var JSON_Decoded;
 var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
 
+function doSomething(element, e) {
+    var charCode;
+
+    if(e && e.which){
+        charCode = e.which;
+    }else if(window.event){
+        e = window.event;
+        charCode = e.keyCode;
+    }
+
+    if(charCode == 13) {
+        summonerLookUp()
+    }
+}
+
 function summonerLookUp() {
   var SUMMONER_NAME = "";
   SUMMONER_NAME = $("#userName").val();
