@@ -4,18 +4,18 @@ var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
 var summonerId
 
 function doSomething(element, e) {
-    var charCode;
+  var charCode;
 
-    if(e && e.which){
-        charCode = e.which;
-    }else if(window.event){
-        e = window.event;
-        charCode = e.keyCode;
-    }
+  if (e && e.which) {
+    charCode = e.which;
+  } else if (window.event) {
+    e = window.event;
+    charCode = e.keyCode;
+  }
 
-    if(charCode == 13) {
-        summonerLookUp()
-    }
+  if (charCode == 13) {
+    summonerLookUp()
+  }
 }
 
 function summonerLookUp() {
@@ -90,11 +90,11 @@ function listChamps() {
       listOfChamps.sort(champCompare); //sort list based on # of games
       if (listOfChamps.length < 6) {
         listOfChamps.forEach(function(item) {
-          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + item.stats.totalSessionsWon + "-" + item.stats.totalSessionsLost + " on " + getChampName(item.id) + "<br />KDA: " + (parseInt(item.stats.totalChampionKills)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalDeathsPerSession)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalAssists)/parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
+          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + item.stats.totalSessionsWon + "-" + item.stats.totalSessionsLost + " on " + getChampName(item.id) + "<br />KDA: " + (parseInt(item.stats.totalChampionKills) / parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalDeathsPerSession) / parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(item.stats.totalAssists) / parseInt(item.stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
         });
       } else {
         for (i = 1; i < 6; i++) {
-          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + listOfChamps[i].stats.totalSessionsWon + "-" + listOfChamps[i].stats.totalSessionsLost + " on " + getChampName(listOfChamps[i].id) + "<br />KDA: " + (parseInt(listOfChamps[i].stats.totalChampionKills)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalDeathsPerSession)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalAssists)/parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
+          document.getElementById("playedChamps").innerHTML = document.getElementById("playedChamps").innerHTML + listOfChamps[i].stats.totalSessionsWon + "-" + listOfChamps[i].stats.totalSessionsLost + " on " + getChampName(listOfChamps[i].id) + "<br />KDA: " + (parseInt(listOfChamps[i].stats.totalChampionKills) / parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalDeathsPerSession) / parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "/" + (parseInt(listOfChamps[i].stats.totalAssists) / parseInt(listOfChamps[i].stats.totalSessionsPlayed)).toFixed(1) + "<br /><br />";
         }
       }
     },
@@ -104,7 +104,7 @@ function listChamps() {
   });
 }
 
-function getChampMasteries(){
+function getChampMastery() {
   $.ajax({
     url: 'https://na.api.pvp.net/championmastery/location/NA1/player/' + summonerId + '/champions?api_key=' + API_KEY,
     type: 'GET',
@@ -113,12 +113,13 @@ function getChampMasteries(){
 
     },
     success: function(json) {
-    	JSON_Encoded = json;
+      JSON_Encoded = json;
       JSON_Decoded = JSON.stringify(json);
-    }
+    },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
       alert("error getting champ mastery");
     }
+  });
 }
 
 function getChampName(champId) {
