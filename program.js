@@ -104,6 +104,23 @@ function listChamps() {
   });
 }
 
+function getChampMasteries(){
+  $.ajax({
+    url: 'https://na.api.pvp.net/championmastery/location/NA1/player/' + summonerId + '/champions?api_key=' + API_KEY,
+    type: 'GET',
+    dataType: 'json',
+    data: {
+
+    },
+    success: function(json) {
+    	JSON_Encoded = json;
+      JSON_Decoded = JSON.stringify(json);
+    }
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      alert("error getting champ mastery");
+    }
+}
+
 function getChampName(champId) {
   var name = "";
   if (champId == 35) {
