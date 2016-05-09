@@ -42,7 +42,6 @@ function summonerLookUp() {
 
         listChamps();
         summonerRankGet(summonerId);
-        getChampMastery();
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         alert("error getting Summoner data!");
