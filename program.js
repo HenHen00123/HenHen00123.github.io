@@ -1,6 +1,6 @@
 var JSON_Encoded;
 var JSON_Decoded;
-var API_KEY = "d57b82f6-6ec3-4270-b464-0b055050fa08";
+var API_KEY = "RGAPI-1f7b458c-c0b8-4328-8432-f3cdbe96cba0";
 var summonerId
 
 function doSomething(element, e) {
